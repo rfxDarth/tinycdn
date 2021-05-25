@@ -10,9 +10,11 @@
   "author": "Drath <github-packagejson@drath.ru> (https://drath.ru)",
   "dependencies": {
     "connect-busboy": "0.0.2",
+    "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-busboy": "^8.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "nedb": "^1.8.0",
     "stream-meter": "^1.0.4",
     "uuid": "^8.3.2"
   }

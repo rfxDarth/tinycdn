@@ -1,0 +1,37 @@
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <div class="form_row">
+        <label for="key">Ключ шифрования:</label>
+        <textarea id="key" name="key"></textarea>
+    </div>
+    <% if(auth) { %>
+        <div class="form_row">
+            <label for="is_private">Приватный файл:</label>
+            <input id="is_private" type="checkbox" name="is_private"/>
+        </div>
+    <% } %>
+    <div class="form_row">
+        <label for="file">Файл для загрузки:</label>
+        <input id="file" type="file" name="file"/>
+    </div>
+    <div class="form_row">
+        <button name="submit">Upload</button>
+    </div>
+  </form>
+
+<% if(auth) { %>
+    <form action="/logout" method="POST">
+        <button>Logout</button>
+    </form>
+<% } else { %>
+    <form action="/auth" method="POST">
+        <div class="form_row">
+            <label for="username">Имя пользователя:</label>
+            <input id="username" name="username"/>
+        </div>
+        <div class="form_row">
+            <label for="password">Пароль:</label>
+            <input id="password" type="password" name="password"/>
+        </div>
+        <button>Login</button>
+    </form>
+<% } %>
